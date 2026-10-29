@@ -50,5 +50,63 @@ Por favor, anexe o arquivo nesta conversa antes de enviar.`;return g("div",{clas
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if(((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host)||u.protocol==="mailto:"||u.protocol==="tel:"||u.protocol==="sms:"){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
   <script type="application/json" data-clippy-inline-media-manifest="1">{"version":1,"slots":[]}</script>
+
+<script>
+// PATCH GOOGLE AGENDA - sobrescreve lógica de horários ocupados
+(function(){
+  function applyBusy(){
+    if(!window.GOOGLE_AGENDA_BUSY) return;
+    const busyToday = window.GOOGLE_AGENDA_BUSY['2026-10-29'] || [];
+    console.log('Aplicando bloqueio de horários:', busyToday);
+    
+    // Tenta encontrar e bloquear botões de horário no DOM
+    const tryBlock = ()=>{
+      const buttons = document.querySelectorAll('button');
+      let blocked = 0;
+      buttons.forEach(btn=>{
+        const txt = btn.textContent.trim();
+        // Formato esperado "17:00" ou "17h"
+        const match = txt.match(/^(\d{1,2})[:h]/);
+        if(match){
+          const hour = parseInt(match[1]);
+          if(busyToday.includes(hour)){
+            if(!btn.disabled){
+              btn.disabled = true;
+              btn.style.background = '#e5e7eb';
+              btn.style.color = '#9ca3af';
+              btn.style.textDecoration = 'line-through';
+              btn.style.cursor = 'not-allowed';
+              btn.title = 'Horário ocupado na Google Agenda';
+              blocked++;
+            }
+          }
+        }
+      });
+      if(blocked>0) console.log('Bloqueados', blocked, 'horários');
+    };
+    
+    // Tenta várias vezes (React renderiza depois)
+    let attempts = 0;
+    const interval = setInterval(()=>{
+      tryBlock();
+      attempts++;
+      if(attempts>20) clearInterval(interval);
+    }, 1000);
+    
+    // Também observa mudanças no DOM
+    const observer = new MutationObserver(tryBlock);
+    observer.observe(document.body, {childList:true, subtree:true});
+  }
+  
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', applyBusy);
+  } else {
+    applyBusy();
+  }
+  window.addEventListener('load', applyBusy);
+  setTimeout(applyBusy, 2000);
+})();
+</script>
+
 </body>
 </html>
