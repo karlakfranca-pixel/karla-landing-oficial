@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karla Kaminskas França | Psicanalista - Atendimento Online</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{vinho:'#4a1028',vinho2:'#5c1a32',dourado:'#c5a880',dourado2:'#b8966a',creme:'#faf7f2'},fontFamily:{serif:['Cormorant Garamond','serif'],sans:['Jost','sans-serif']}}}}
+</script>
+<style>
+body{font-family:'Jost',sans-serif;background:#faf7f2}
+.serif{font-family:'Cormorant Garamond',serif}
+</style>
+</head>
+<body class="bg-creme text-gray-800">
+<!-- CONFIG SUPABASE - INSTRUÇÕES NO FINAL -->
+<header class="sticky top-0 z-50 bg-creme/90 backdrop-blur border-b border-vinho/10">
+<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<span class="serif text-vinho text-xl font-semibold tracking-widest">KARLA KAMINSKAS FRANÇA</span>
+<a href="#agendar" class="hidden md:inline-block border border-vinho text-vinho px-6 py-2 text-xs tracking-[0.2em] hover:bg-vinho hover:text-white transition">AGENDAR CONVERSA</a>
+</div>
+</header>
+
+<section class="max-w-6xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="serif text-[42px] md:text-[56px] leading-[0.95] text-vinho font-semibold">
+Um espaço<br>
+<span class="font-light italic">para você</span>
+</h1>
+<p class="mt-6 text-[17px] leading-relaxed font-light max-w-[460px]">Psicanálise online para quem sente <strong>angústia sem nome, ansiedade, cansaço emocional</strong> e quer se reencontrar.</p>
+
+<div class="mt-8 space-y-4 max-w-[460px]">
+<div class="flex gap-3"><span class="text-dourado mt-1">•</span><p class="font-light text-[15px]"><strong>Angústia e Ansiedade</strong> — Para quem sente o peito apertado sem motivo aparente.</p></div>
+<div class="flex gap-3"><span class="text-dourado mt-1">•</span><p class="font-light text-[15px]">Para atravessar <strong>perdas, mudanças e encerramentos</strong> com acolhimento, tempo e um lugar seguro para sentir.</p></div>
+<div class="flex gap-3"><span class="text-dourado mt-1">•</span><p class="font-light text-[15px]">Para se escutar com profundidade, compreender a sua história e fazer escolhas mais alinhadas a você.</p></div>
+</div>
+
+<div class="mt-10 flex flex-wrap gap-4">
+<a id="ctaHero" href="#agendar" class="bg-vinho text-white px-8 py-4 text-xs tracking-[0.2em] hover:bg-vinho2 transition">AGENDAR MINHA PRIMEIRA CONVERSA</a>
+<a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Karla!%20Vim%20pelo%20seu%20site%20e%20quero%20falar%20sobre%20minha%20primeira%20conversa." class="border border-vinho text-vinho px-8 py-4 text-xs tracking-[0.2em] hover:bg-vinho hover:text-white transition">FALAR NO WHATSAPP</a>
+</div>
+<p class="mt-4 text-[12px] text-gray-500 flex items-center gap-2"><span class="w-6 h-px bg-dourado"></span> Online Brasil e Exterior • Encontro online de 50 minutos</p>
+</div>
+
+<div class="relative">
+<div class="bg-white p-2 shadow-[0_20px_60px_rgba(74,16,40,0.15)] rotate-1">
+<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Retrato de Karla Kaminskas França, psicanalista" class="w-full aspect-[4/5] object-cover grayscale-[0.1]">
+</div>
+<div class="absolute -bottom-6 -left-6 bg-vinho text-white px-6 py-5 shadow-lg max-w-[260px]">
+<p class="serif text-[18px] leading-tight">Karla Kaminskas França</p>
+<p class="text-[11px] tracking-widest mt-2 text-dourado">PSICANALISTA • ONLINE BRASIL E EXTERIOR</p>
+<p class="text-[13px] font-light mt-3 leading-snug">Ajudo pessoas que estão sentindo angústia, ansiedades e sobrecarga emocional a encontrarem sentido, leveza e presença em suas vidas, através de uma escuta profunda e sem julgamentos.</p>
+</div>
+</div>
+</section>
+
+<section class="bg-white border-t border-vinho/5 py-16">
+<div class="max-w-6xl mx-auto px-6">
+<h2 class="serif text-3xl md:text-4xl text-vinho text-center">Como funciona a primeira conversa?</h2>
+<div class="mt-12 grid md:grid-cols-3 gap-8">
+<div class="border border-creme p-8"><span class="serif text-5xl text-dourado">01</span><h3 class="mt-4 serif text-xl text-vinho">Encontro de 50min</h3><p class="mt-2 text-sm font-light leading-relaxed">Encontro online de 50 minutos para você contar o que sente, conhecer a escuta e decidir se deseja continuar.</p></div>
+<div class="border border-creme p-8"><span class="serif text-5xl text-dourado">02</span><h3 class="mt-4 serif text-xl text-vinho">Valor de reserva</h3><p class="mt-2 text-sm font-light leading-relaxed">É o valor que garante o seu horário na agenda. Ele é sem reembolso, pois o horário passa a ser reservado exclusivamente para você.</p></div>
+<div class="border border-creme p-8"><span class="serif text-5xl text-dourado">03</span><h3 class="mt-4 serif text-xl text-vinho">Confirmação</h3><p class="mt-2 text-sm font-light leading-relaxed">Para confirmar a entrevista, é necessário realizar o pagamento por Pix ou Mercado Pago, anexar o comprovante e enviar a confirmação pelo WhatsApp.</p></div>
+</div>
+</div>
+</section>
+
+<section id="agendar" class="bg-vinho py-20">
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+<div class="text-white">
+<h2 class="serif text-4xl md:text-5xl leading-[0.95]">Preencha, escolha<br><em class="text-dourado italic">o valor e envie</em><br>a confirmação</h2>
+<p class="mt-6 text-white/80 font-light max-w-md">Preencha seu nome, seu WhatsApp e escolha um horário livre para continuar. Ao confirmar, uma mensagem pronta abrirá no WhatsApp da Karla com seus dados.</p>
+<div class="mt-8 p-6 bg-white/5 border border-dourado/20">
+<p class="text-xs tracking-widest text-dourado">IMPORTANTE</p>
+<p class="mt-2 text-sm font-light leading-relaxed text-white/90">Sim. Para confirmar a entrevista, é necessário realizar o pagamento por Pix ou Mercado Pago (para quem está no exterior), anexar o comprovante e enviar a confirmação pelo WhatsApp. vou anexar aqui no WhatsApp.</p>
+</div>
+</div>
+
+<form id="leadForm" class="bg-creme p-8 shadow-2xl">
+<div id="formMsg" class="hidden mb-4 p-4 text-sm rounded"></div>
+
+<label class="text-[11px] tracking-widest text-vinho font-medium">SEU NOME COMPLETO *</label>
+<input required name="nome" placeholder="Preencha seu nome" class="w-full mt-1 mb-5 border border-vinho/20 px-4 py-3.5 bg-white text-sm focus:outline-none focus:border-vinho">
+
+<label class="text-[11px] tracking-widest text-vinho font-medium">SEU WHATSAPP *</label>
+<input required name="whatsapp" placeholder="(11) 9 9999-9999" class="w-full mt-1 mb-5 border border-vinho/20 px-4 py-3.5 bg-white text-sm focus:outline-none focus:border-vinho">
+
+<label class="text-[11px] tracking-widest text-vinho font-medium">O QUE MAIS TE AFLIGE HOJE? *</label>
+<select required name="dor_principal" class="w-full mt-1 mb-5 border border-vinho/20 px-4 py-3.5 bg-white text-sm focus:outline-none focus:border-vinho">
+<option value="">Selecione uma opção</option>
+<option>Angústia e Ansiedade</option>
+<option>Perdas, mudanças e encerramentos</option>
+<option>Relacionamentos</option>
+<option>Autoestima e autocobrança</option>
+<option>Outro</option>
+</select>
+
+<label class="text-[11px] tracking-widest text-vinho font-medium">ESCOLHA UM HORÁRIO LIVRE *</label>
+<input required name="data_consulta" type="date" class="w-full mt-1 mb-6 border border-vinho/20 px-4 py-3.5 bg-white text-sm focus:outline-none focus:border-vinho">
+
+<label class="flex gap-3 items-start mb-6 cursor-pointer">
+<input type="checkbox" required class="mt-1">
+<span class="text-[12px] font-light leading-snug">Para confirmar, marque que você leu e concorda com a política do valor de reserva. É o valor que garante o seu horário na agenda. Ele é sem reembolso, pois o horário passa a ser reservado exclusivamente para você.</span>
+</label>
+
+<button id="btnSubmit" type="submit" class="w-full bg-vinho text-white py-4 text-xs tracking-[0.25em] hover:bg-black transition">ENVIAR COMPROVANTE NO WHATSAPP DA KARLA</button>
+<p class="mt-3 text-[11px] text-center text-gray-500">Seus dados são salvos com segurança no meu sistema (Supabase) e usados apenas para agendamento. 100% sigiloso.</p>
+</form>
+</div>
+</section>
+
+<footer class="bg-[#3a0d20] text-white/60 py-8 text-center text-xs tracking-widest">
+KARLA KAMINSKAS FRANÇA • PSICANALISTA • ONLINE BRASIL E EXTERIOR
+</footer>
+
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+const SUPABASE_URL = 'https://dorafeiwwyxpqxvfzdwc.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvcmFmZWl3d3l4cHF4dmZ6ZHdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMyNTAyOTEsImV4cCI6MjEwODgyNjI5MX0.ocZkig3AFzM5sBkG8AmCA3JNNnnKnnYiy9_zgogYMlA'; // <-- COLOQUE SUA CHAVE AQUI: Project Settings > API > anon public
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const form = document.getElementById('leadForm');
+const msg = document.getElementById('formMsg');
+const btn = document.getElementById('btnSubmit');
+
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  if(SUPABASE_ANON_KEY.includes('COLE_SUA')){
+    msg.className='block mb-4 p-4 text-sm rounded bg-red-100 text-red-800';
+    msg.textContent='⚠️ Falta colar sua anon key! Vá no Supabase > Project Settings (engrenagem) > API e copie o anon public, cole onde está eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvcmFmZWl3d3l4cHF4dmZ6ZHdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMyNTAyOTEsImV4cCI6MjEwODgyNjI5MX0.ocZkig3AFzM5sBkG8AmCA3JNNnnKnnYiy9_zgogYMlA no código.';
+    msg.classList.remove('hidden');
+    return;
+  }
+  btn.textContent='ENVIANDO...';
+  btn.disabled=true;
+  const fd = new FormData(form);
+  const payload = {
+    nome: fd.get('nome'),
+    whatsapp: fd.get('whatsapp'),
+    dor_principal: fd.get('dor_principal'),
+    data_consulta: fd.get('data_consulta'),
+    origem: 'Google Ads - karlakaminskas.vercel.app',
+    status: 'novo'
+  };
+  try{
+    const { error } = await supabase.from('leads').insert([payload]);
+    if(error) throw error;
+    msg.className='block mb-4 p-4 text-sm rounded bg-green-100 text-green-800';
+    msg.textContent='✅ Recebido com carinho! Vou te chamar no WhatsApp em até 2h. Já vou abrir o WhatsApp...';
+    msg.classList.remove('hidden');
+    const texto = encodeURIComponent(`Olá, Karla! Quero agendar minha primeira conversa.\n\nMeu nome: ${payload.nome}\nWhatsApp: ${payload.whatsapp}\nO que me aflige: ${payload.dor_principal}\nData escolhida: ${payload.data_consulta}\n\nVou anexar aqui no WhatsApp o comprovante.`);
+    setTimeout(()=>{ window.open(`https://wa.me/5511999999999?text=${texto}`,'_blank'); }, 800);
+    form.reset();
+  }catch(err){
+    msg.className='block mb-4 p-4 text-sm rounded bg-red-100 text-red-800';
+    msg.textContent='Erro ao salvar: '+(err.message||'tente novamente');
+    msg.classList.remove('hidden');
+    console.error(err);
+  }finally{
+    btn.textContent='ENVIAR COMPROVANTE NO WHATSAPP DA KARLA';
+    btn.disabled=false;
+  }
+});
+</script>
+</body>
+</html>
